@@ -1,0 +1,74 @@
+{% extends "brain_and_body/base.html" %}
+{% load static %}
+
+{% block link %}
+    <link href="{% static 'brain_and_body/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+    <div id="grid">
+        <div class="link-container container-left">
+            {% if user.is_authenticated %}
+                <a href="{% url 'memory' %}">
+            {% else %}
+                <a href="{% url 'login' %}">
+            {% endif %}
+                <div class="group group-memory">
+                    <img class="transparent" src="{% static 'images/memory_1.png' %}" alt="brain-transparent">
+                    <img class="colored" src="{% static 'images/memory_2.png' %}" alt="side-brain-colored">
+                    <div class="workout-name">Memory</div>
+                </div>
+            </a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'speed' %}">
+            {% else %}
+                <a href="{% url 'login' %}">
+            {% endif %}
+                <div class="group group-speed">
+                    <img class="transparent" src="{% static 'images/speed_1.png' %}" alt="watch-transparent">
+                    <img class="colored" src="{% static 'images/speed_2.png' %}" alt="watch-colored">
+                    <div class="workout-name">Reactivity</div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="image-container">
+            <img id="circle-gradient-img" src="{% static 'images/circle-gradient.png' %}" alt="gradient background">
+            <img id="brain-img" src="{% static 'images/half-brain.png' %}" alt="left-brain">
+            <img id="weight-img" src="{% static 'images/half-weight.png' %}" alt="right-weight">
+        </div>
+    
+        <div class="link-container container-right">
+            {% if user.is_authenticated %}
+                <a href="{% url 'workout' %}">
+            {% else %}
+                <a href="{% url 'login' %}">
+            {% endif %}
+                <div class="group group-workout">
+                    <img class="transparent" src="{% static 'images/workout_1.png' %}" alt="bicep-transparent">
+                    <img class="colored" src="{% static 'images/workout_2.png' %}" alt="bicep-colored">
+                    <div class="workout-name">Workout</div>
+                </div>
+            </a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'tabata' %}">
+            {% else %}
+                <a href="{% url 'login' %}">
+            {% endif %}
+                <div class="group group-tabata">
+                    <img class="transparent" src="{% static 'images/tabata_1.png' %}" alt="heart-transparent">
+                    <img class="colored" src="{% static 'images/tabata_2.png' %}" alt="heart-colored">
+                    <div class="workout-name">Tabata</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+{% endblock %}
+
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'brain_and_body/home.js' %}"></script>
+{% endblock %}

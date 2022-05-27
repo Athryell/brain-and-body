@@ -1,0 +1,23 @@
+body {
+  background-color: #FE9A1F;
+  text-align: center;
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.countdown h3 {
+  font-size: 2em;
+}
+
+#canvas-container {
+  position: relative;
+  height: 80%;
+  margin: 10px 0;
+}
+#canvas-container canvas {
+  border: 1px dashed black;
+}/*# sourceMappingURL=speed.css.map */

@@ -1,0 +1,43 @@
+{% extends "brain_and_body/base.html" %}
+{% load static %}
+
+{% block link %} <link href="{% static 'brain_and_body/global_stats.css'%}" rel="stylesheet"> {% endblock %}
+
+{% block title %} global stats {% endblock %}
+
+{% block body %}
+    
+    <div class="map-container">
+        <img src="{% static 'images/map.jpg' %}" alt="world-map">
+        <div id="EU" class='abs'>
+            <div class='svg-container'>
+                <svg class="Europe"></svg>
+            </div>
+        </div>
+        <div id="AM" class='abs'>
+            <div class='svg-container'>
+                <svg class="America"></svg>
+            </div>
+        </div>
+        <div id="AS" class='abs'>
+            <div class='svg-container'>
+                <svg class="Asia"></svg>
+            </div>
+        </div>
+        <div id="AF" class='abs'>
+            <div class='svg-container'>
+                <svg class="Africa"></svg>
+            </div>
+        </div>
+        <div id="OC" class='abs'>
+            <div class='svg-container'>
+                <svg class="Oceania"></svg>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block script %}
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="{% static 'brain_and_body/global_stats.js' %}"></script>
+{% endblock %}

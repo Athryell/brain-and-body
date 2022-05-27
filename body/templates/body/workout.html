@@ -1,0 +1,37 @@
+{% extends 'brain_and_body/base.html' %}
+{% load static %}
+{% block link %} <link href="{% static 'body/workout.css'%}" rel="stylesheet"> {% endblock %}
+{% block title %} Workout {% endblock %}
+
+{% block body %}
+{{ exercises_list|json_script:"exercisesList" }}
+    
+    <h1>Choose your Workout!</h1>
+    <p>(You can add more exercises from the <a id='link-to-exercise' href="{% url 'profile' request.user.username %}#add-exercise">profile</a> page)</p>
+
+    <div class='container'>
+        <div id="form-group">
+            <form id="workout-form" >
+                {{ workout_form.as_p }}
+                <button type="button" id="build-workout" class='btn btn-warning'>Build workout</button>
+            </form>
+        </div>
+        
+        <div hidden id="workout-panel">
+            <div id="workout-header">
+            </div>
+            <div id="workout-body">
+            </div>
+            <div id="workout-buttons">
+                <button type="button" id="start-workout" class='btn btn-success'>Let's go!</button>
+                <button type="button" id="reset-workout" class='btn btn-warning'>Not this one..!</button>
+                <button hidden type="button" id="stop-workout" class='btn btn-danger'>Stop!</button>
+            </div>
+        </div>
+        
+    </div>
+   
+
+{% endblock %}
+
+{% block script %}<script src="{% static 'body/workout.js' %}"></script>{% endblock %}

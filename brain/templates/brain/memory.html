@@ -1,0 +1,26 @@
+{% extends 'brain_and_body/base.html' %}
+{% load static %}
+{% block link %} <link href="{% static 'brain/memory.css'%}" rel="stylesheet"> {% endblock %}
+
+{% block title %} Memory {% endblock %}
+{% block body %}
+
+    <h3>Let's remember like Elephants!</h3>
+    
+    <div class="grid-container">
+        {% for card in deck %}
+            <div class="flip-card" data-name="{{ card.name }}" data-is-revealed="false" data-found="false">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="{{ card.image.url }}" alt="{{ card.image.url }}">
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+
+{% endblock %}
+{% block script %}<script src="{% static 'brain/memory.js' %}"></script>{% endblock %}

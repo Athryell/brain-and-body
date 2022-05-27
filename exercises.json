@@ -1,0 +1,56 @@
+[
+    {
+        "model": "body.exercise",
+        "pk": 1,
+        "fields": {
+            "name": "Squat",
+            "category": "Lower Body",
+            "isCardio": "False"
+        }
+    },
+    {
+        "model": "body.exercise",
+        "pk": 2,
+        "fields": {
+            "name": "Lounges",
+            "category": "Lower Body",
+            "isCardio": "False"
+        }
+    },
+    {
+        "model": "body.exercise",
+        "pk": 3,
+        "fields": {
+            "name": "Push ups",
+            "category": "Upper Body",
+            "isCardio": "False"
+        }
+    },
+    {
+        "model": "body.exercise",
+        "pk": 4,
+        "fields": {
+            "name": "Pull ups",
+            "category": "Upper Body",
+            "isCardio": "False"
+        }
+    },
+    {
+        "model": "body.exercise",
+        "pk": 5,
+        "fields": {
+            "name": "Jumping Jacks",
+            "category": "Full Body",
+            "isCardio": "True"
+        }
+    },
+    {
+        "model": "body.exercise",
+        "pk": 6,
+        "fields": {
+            "name": "Burpees",
+            "category": "Full Body",
+            "isCardio": "True"
+        }
+    }
+]

@@ -1,0 +1,18 @@
+{% extends 'brain_and_body/base.html' %}
+{% load static %}
+{% block link %} <link href="{% static 'brain/speed.css'%}" rel="stylesheet"> {% endblock %}
+
+{% block title %} Speed {% endblock %}
+{% block body %}
+    <div class="countdown">
+        <h3>Hit the circles before they disappear!</h3>
+        <h4></h4>
+    </div>
+
+    <div id="canvas-container">   
+        <canvas id="canvas">Your browser doesn't support the HTML5 canvas tag (sorry)</canvas>
+    </div>
+    
+
+{% endblock %}
+{% block script %}<script src="{% static 'brain/speed.js' %}"></script>{% endblock %}

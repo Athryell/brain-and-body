@@ -1,0 +1,179 @@
+$primary-color: #FE9A1F
+$primary-color-light: #FFB761
+$secondary-color: #21B4FF
+$secondary-color-dark: #0077B4
+
+.image-container
+    margin: auto
+    display: flex
+    justify-content: center
+    position: relative
+    width: 20vw
+
+    #circle-gradient-img
+        z-index: -10
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        max-width: 100%
+            
+    #brain-img
+        position: relative
+        z-index: 1
+        max-width: 45%
+        justify-self: right
+        float: right
+
+        animation-name: beat
+        animation-duration: 4s
+        animation-iteration-count: infinite
+
+    #weight-img
+        position: relative
+        z-index: -1
+        max-width: 45%
+
+        animation-name: beat
+        animation-duration: 4s
+        animation-delay: 2s
+        animation-iteration-count: infinite
+
+@keyframes beat
+  0%
+    transform: scale(1)
+  25%
+    transform: scale(1.1)
+  50%
+    transform: scale(1)
+
+#grid
+    margin: 5rem auto
+    display: grid
+    grid-template-columns: auto auto auto
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    .link-container
+        width: 30vw
+        margin: 0 2vw
+        
+        .group
+            border: 2px solid grey
+            overflow: hidden
+            position: relative
+            height: 10rem
+            width: 10rem
+            border-radius: 1rem
+            transition: width 0.5s
+            
+            img
+                opacity: 1
+                margin: 1rem
+                height: 8rem
+                transition: opacity 1s
+
+            .transperent
+                opacity: 1
+
+            .colored
+                opacity: 0
+            
+            .workout-name
+                display: flex
+                color: black
+                font-weight: bold
+                font-size: 0
+
+                height: 100%
+                align-items: center
+                justify-content: center
+
+                transition: font-size 0.5s
+                transition-delay: 0.1s
+
+            &:hover
+                overflow: visible
+                width: 100%
+
+                .transparent
+                    opacity: 0
+                
+                .colored
+                    opacity: 1
+
+                .workout-name
+                    font-size: 2em
+
+    .container-left
+        .group
+            // background-color: $primary-color
+            margin-left: auto
+
+            .transparent
+                float: right
+
+            .colored
+                position: absolute
+                top: 0
+                right: 0
+
+        .group-memory
+            background-color: $primary-color-light
+        
+        .group-speed
+            background-color: $primary-color
+
+
+    .container-right
+        .group
+            // background-color: $secondary-color
+            text-align: left
+
+            .transparent
+                float: left
+
+            .colored
+                position: absolute
+                top: 0
+                left: 0
+
+        .group-workout
+            background-color: $secondary-color-dark
+
+        .group-tabata
+            background-color: $secondary-color
+
+@media only screen and (max-width: 768px)
+    .image-container
+        display: none
+
+    #grid
+        margin: 0
+        display: flex
+        flex-direction: column
+
+        .link-container
+            width: 80%
+
+            .group
+                height: 6rem
+                margin: 0 auto 0 auto
+
+                // .workout-name
+                //     padding: -10em
+
+                img
+                    margin: 0 auto
+                    padding: 1rem
+                    max-width: 100%
+                    max-height: 100%
+
+                &:hover
+                    span
+                        font-size: 5vw
+        
+@media only screen and (max-width: 480px)
+    .link-container
+        width: 100%

@@ -1,0 +1,40 @@
+body {
+  background-color: #21B4FF;
+}
+
+#link-to-exercise {
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 500px;
+  text-align: center;
+}
+
+#form-group {
+  margin-top: 30px;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+#workout-panel {
+  width: 40%;
+  margin: 0 auto;
+}
+#workout-panel #workout-body {
+  margin-bottom: 1em;
+}
+#workout-panel .exercise-container {
+  padding: 0.5em;
+}
+#workout-panel #workout-buttons {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=workout.css.map */

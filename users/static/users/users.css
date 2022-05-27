@@ -1,0 +1,30 @@
+body {
+  background-color: #FE9A1F;
+}
+
+.form-group {
+  margin: 5px;
+}
+.form-group label {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#cta {
+  color: #0077B4;
+}
+
+.info-text {
+  display: inline-block;
+  margin-left: 2px;
+  background-color: #ebebeb;
+  color: #2e2e2e;
+  padding: 1em 1em 0;
+  border-radius: 4px;
+}
+.info-text p {
+  padding: 0;
+}/*# sourceMappingURL=users.css.map */

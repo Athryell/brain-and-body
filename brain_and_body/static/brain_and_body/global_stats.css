@@ -1,0 +1,42 @@
+.map-container {
+  position: relative;
+  text-align: center;
+}
+.map-container img {
+  max-width: 100%;
+  z-index: 1;
+}
+.map-container .svg-container {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.abs {
+  position: absolute;
+}
+
+#EU {
+  top: 25%;
+  left: 45%;
+}
+
+#AM {
+  top: 45%;
+  left: 15%;
+}
+
+#AS {
+  top: 25%;
+  left: 65%;
+}
+
+#AF {
+  top: 50%;
+  left: 43%;
+}
+
+#OC {
+  top: 65%;
+  left: 73%;
+}/*# sourceMappingURL=global_stats.css.map */

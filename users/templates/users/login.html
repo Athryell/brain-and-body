@@ -1,0 +1,34 @@
+{% extends 'brain_and_body/base.html' %}
+{% load static %}
+
+{% block link %} <link href="{% static 'users/users.css' %}" rel="stylesheet"> {% endblock %}
+
+{% block body %}
+
+    <h2>Login</h2>
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+
+    <div class="info-text">
+        <p>Hi there, this is a demo so you can access with this fake account (or go ahead and create a new one only for you) </p>
+        <p>Ps: Password is <strong>123</strong></p>
+    </div>
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input autofocus class="form-control" type="text" name="username" placeholder="Username" value="Handsome User">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Password" value="123">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Login">
+        </div>
+    </form>
+    <div class="form-group">
+        <small class="text-muted">Don't have an account? <a id="cta" href="{% url 'register' %}">Register here.</a></small>
+    </div>
+{% endblock %}

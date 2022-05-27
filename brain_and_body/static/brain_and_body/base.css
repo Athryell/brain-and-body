@@ -1,0 +1,167 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#brain-text {
+  color: #FE9A1F;
+}
+
+#body-text {
+  color: #21B4FF;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0 1em;
+  color: #fff;
+}
+a:hover {
+  color: #FE9A1F;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+  padding: 0 1.5em;
+}
+
+body {
+  background-color: #dadada;
+  position: relative;
+}
+body .content {
+  min-height: calc(100vh - 60px - 30px);
+}
+body nav {
+  height: 60px;
+  background: #292929;
+}
+body nav img {
+  margin: 20px;
+}
+body nav #open-menu {
+  display: none;
+}
+body nav #responsive-menu {
+  display: inline-block;
+}
+body nav #responsive-menu #close-menu {
+  display: none;
+}
+body nav ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+body nav ul #logo {
+  font-size: 21px;
+  margin: auto 0;
+}
+body nav ul #responsive-menu {
+  margin: auto 0;
+}
+body footer {
+  height: 30px;
+  width: 100%;
+  background-color: #292929;
+  color: #fff;
+}
+body footer ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+body footer ul li {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-credits {
+  position: relative;
+  display: inline-block;
+}
+.tooltip-credits small {
+  border-bottom: 1px dotted white;
+}
+.tooltip-credits .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 38px;
+}
+.tooltip-credits:hover .tooltiptext {
+  visibility: visible;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+  background: linear-gradient(260deg, #FE9A1F 0%, #21B4FF 100%);
+  margin: auto;
+  padding: 2em;
+  border: 1px solid #888;
+  width: 60%;
+}
+.modal .modal-content .btn {
+  margin: 1em auto 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  nav ul #open-menu {
+    display: block;
+  }
+  nav ul #open-menu:hover {
+    cursor: pointer;
+  }
+  nav ul #responsive-menu {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    opacity: 90%;
+    text-align: center;
+    padding: 3em 0;
+    z-index: 1;
+  }
+  nav ul #responsive-menu li {
+    padding: 1em;
+  }
+  nav ul #responsive-menu #close-menu {
+    width: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  nav ul #responsive-menu #close-menu:hover {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=base.css.map */

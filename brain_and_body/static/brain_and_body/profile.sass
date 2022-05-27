@@ -1,0 +1,83 @@
+$primary-color: #FE9A1F
+$primary-color-light: #FFB761
+$secondary-color: #21B4FF
+$secondary-color-dark: #0077B4
+
+.profile-container
+    padding: 2em
+    display: flex
+
+    .stats-container
+        text-align: center
+        min-width: 200px
+
+        p
+            border-radius: 5px
+            padding: 1em
+            margin: 1em 0
+
+        .p-m
+            border: 2px solid $primary-color
+        .p-s
+            border: 2px solid $primary-color-light
+        .p-w
+            border: 2px solid $secondary-color-dark
+        .p-t
+            border: 2px solid $secondary-color
+
+    .svg-container
+        min-height: 300px
+        display: flex
+        justify-content: center
+
+.exercises-container
+    padding: 2em
+    display: flex
+
+    h4
+        padding: 0
+    
+    p
+        display: inline
+        padding: 0
+        margin: 0
+
+    span
+        float: right
+        color: red
+        &:hover
+            cursor: pointer
+    
+    .div-form
+        margin: 0 auto
+
+        form
+            padding: 13px
+            margin-bottom: 20px
+            border: 1px solid #bdbdbd
+            border-radius: 10px
+
+            h4
+                text-align: center
+                margin-top: 0.5em
+
+            p
+                display: block
+                margin: 1em
+            
+            button
+                margin-left: 50%
+                margin-bottom: 1em
+                transform: translateX(-50%)
+
+@media screen and ( max-width: 800px )
+    .profile-container
+        flex-direction: column-reverse
+
+        .svg-container
+            min-height: 100px
+
+    .exercises-container
+        flex-direction: column-reverse
+    
+        

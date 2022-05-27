@@ -1,0 +1,189 @@
+.image-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 20vw;
+}
+.image-container #circle-gradient-img {
+  z-index: -10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+}
+.image-container #brain-img {
+  position: relative;
+  z-index: 1;
+  max-width: 45%;
+  justify-self: right;
+  float: right;
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.image-container #weight-img {
+  position: relative;
+  z-index: -1;
+  max-width: 45%;
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+#grid {
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#grid .link-container {
+  width: 30vw;
+  margin: 0 2vw;
+}
+#grid .link-container .group {
+  border: 2px solid grey;
+  overflow: hidden;
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+  transition: width 0.5s;
+}
+#grid .link-container .group img {
+  opacity: 1;
+  margin: 1rem;
+  height: 8rem;
+  transition: opacity 1s;
+}
+#grid .link-container .group .transperent {
+  opacity: 1;
+}
+#grid .link-container .group .colored {
+  opacity: 0;
+}
+#grid .link-container .group .workout-name {
+  display: flex;
+  color: black;
+  font-weight: bold;
+  font-size: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: font-size 0.5s;
+  transition-delay: 0.1s;
+}
+#grid .link-container .group:hover {
+  overflow: visible;
+  width: 100%;
+}
+#grid .link-container .group:hover .transparent {
+  opacity: 0;
+}
+#grid .link-container .group:hover .colored {
+  opacity: 1;
+}
+#grid .link-container .group:hover .workout-name {
+  font-size: 2em;
+}
+#grid .container-left .group {
+  margin-left: auto;
+}
+#grid .container-left .group .transparent {
+  float: right;
+}
+#grid .container-left .group .colored {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#grid .container-left .group-memory {
+  background-color: #FFB761;
+}
+#grid .container-left .group-speed {
+  background-color: #FE9A1F;
+}
+#grid .container-right .group {
+  text-align: left;
+}
+#grid .container-right .group .transparent {
+  float: left;
+}
+#grid .container-right .group .colored {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#grid .container-right .group-workout {
+  background-color: #0077B4;
+}
+#grid .container-right .group-tabata {
+  background-color: #21B4FF;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    display: none;
+  }
+
+  #grid {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #grid .link-container {
+    width: 80%;
+  }
+  #grid .link-container .group {
+    height: 6rem;
+    margin: 0 auto 0 auto;
+  }
+  #grid .link-container .group img {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #grid .link-container .group:hover span {
+    font-size: 5vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .link-container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=home.css.map */
