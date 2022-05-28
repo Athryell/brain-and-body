@@ -1,0 +1,85 @@
+.profile-container {
+  padding: 2em;
+  display: flex;
+}
+.profile-container .stats-container {
+  text-align: center;
+  min-width: 200px;
+}
+.profile-container .stats-container p {
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+.profile-container .stats-container .p-m {
+  border: 2px solid #FE9A1F;
+}
+.profile-container .stats-container .p-s {
+  border: 2px solid #FFB761;
+}
+.profile-container .stats-container .p-w {
+  border: 2px solid #0077B4;
+}
+.profile-container .stats-container .p-t {
+  border: 2px solid #21B4FF;
+}
+.profile-container .svg-container {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.exercises-container {
+  padding: 2em;
+  display: flex;
+}
+.exercises-container h4 {
+  padding: 0;
+}
+.exercises-container p {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.exercises-container span {
+  float: right;
+  color: red;
+}
+.exercises-container span:hover {
+  cursor: pointer;
+}
+.exercises-container .div-form {
+  margin: 0 auto;
+}
+.exercises-container .div-form form {
+  padding: 13px;
+  margin-bottom: 20px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+}
+.exercises-container .div-form form h4 {
+  text-align: center;
+  margin-top: 0.5em;
+}
+.exercises-container .div-form form p {
+  display: block;
+  margin: 1em;
+}
+.exercises-container .div-form form button {
+  margin-left: 50%;
+  margin-bottom: 1em;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px) {
+  .profile-container {
+    flex-direction: column-reverse;
+  }
+  .profile-container .svg-container {
+    min-height: 100px;
+  }
+
+  .exercises-container {
+    flex-direction: column-reverse;
+  }
+}/*# sourceMappingURL=profile.css.map */
