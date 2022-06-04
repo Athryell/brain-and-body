@@ -30,7 +30,8 @@ DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = [
     'brainandbody.herokuapp.com',
-    'localhost'
+    'localhost',
+    '127.0.0.1'
     ]
 
 

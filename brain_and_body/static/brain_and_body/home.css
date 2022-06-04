@@ -90,7 +90,7 @@
   height: 8rem;
   transition: opacity 1s;
 }
-#grid .link-container .group .transperent {
+#grid .link-container .group .transparent {
   opacity: 1;
 }
 #grid .link-container .group .colored {
