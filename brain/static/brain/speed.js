@@ -117,11 +117,21 @@ function startGame(){
 
     /* Modal */
     btnCloseModal.onclick = async function() {
-        const response = await fetch(`http://localhost:8000/${username}/points`)
+        let hostname
+        
+        if (window.location.hostname == 'brainandbody.herokuapp.com') {
+            hostname = 'brainandbody.herokuapp.com'
+        } else if(window.location.hostname == 'localhost') {
+            hostname = 'localhost:8000'
+        } else if (window.location.hostname == '127.0.0.1') {
+            hostname = '127.0.0.1:8000'
+        }
+        
+        const response = await fetch(`http://${hostname}/${username}/points`)
         const points = await response.json()
         const current_points_speed = points.points_speed
 
-        fetch(`http://localhost:8000/${username}/points`, {
+        fetch(`http://${hostname}/${username}/points`, {
             method: 'PUT',
             body: JSON.stringify({
                 points_speed: current_points_speed + speedPointMultiplier
