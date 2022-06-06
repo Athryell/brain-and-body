@@ -2,18 +2,30 @@ const openMenuBtn = document.getElementById('open-menu')
 const closeMenuBtn = document.getElementById('close-menu')
 const menu = document.getElementById('responsive-menu')
 
-var hostname
+var hostname = checkHostname()
 
-if (window.location.hostname == 'brainandbody.herokuapp.com') {
-    hostname = 'brainandbody.herokuapp.com'
-} else if(window.location.hostname == 'localhost') {
-    hostname = 'localhost:8000'
-} else if (window.location.hostname == '127.0.0.1') {
-    hostname = '127.0.0.1:8000'
-} else {
-    hostname = 'brainandbody.herokuapp.com'
-    console.log('error with hostname')
+function checkHostname(){
+    if (window.location.hostname == 'brainandbody.herokuapp.com') {
+        return 'brainandbody.herokuapp.com'
+    } else if(window.location.hostname == 'localhost') {
+        return 'localhost:8000'
+    } else if (window.location.hostname == '127.0.0.1') {
+        return '127.0.0.1:8000'
+    }
 }
+
+// if (window.location.hostname == 'brainandbody.herokuapp.com') {
+//     hostname = 'brainandbody.herokuapp.com'
+// } else if(window.location.hostname == 'localhost') {
+//     hostname = 'localhost:8000'
+// } else if (window.location.hostname == '127.0.0.1') {
+//     hostname = '127.0.0.1:8000'
+// } else {
+//     hostname = 'brainandbody.herokuapp.com'
+//     console.log('error with hostname')
+// }
+
+console.log(hostname)
 
 openMenuBtn.addEventListener('click', () => {
     openMenuBtn.style.display = 'none'
