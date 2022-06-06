@@ -1,5 +1,3 @@
-var hostname
-
 const username = JSON.parse(document.getElementById('user_username').textContent)
 const canvas = document.getElementById('canvas')
 const canvasContainer = document.getElementById('canvas-container')
@@ -19,6 +17,19 @@ let hits = 0
 let circlePosX = Math.floor(Math.random() * canvas.width)
 let circlePosY = Math.floor(Math.random() * canvas.height)
 let isGameOver = false
+
+var hostname
+
+if (window.location.hostname == 'brainandbody.herokuapp.com') {
+    hostname = 'brainandbody.herokuapp.com'
+} else if(window.location.hostname == 'localhost') {
+    hostname = 'localhost:8000'
+} else if (window.location.hostname == '127.0.0.1') {
+    hostname = '127.0.0.1:8000'
+} else {
+    hostname = 'brainandbody.herokuapp.com'
+    console.log('error with hostname')
+}
 
 canvas.width = canvasContainer.clientWidth
 canvas.height = canvasContainer.clientHeight
