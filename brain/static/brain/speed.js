@@ -117,7 +117,6 @@ function startGame(){
 
     /* Modal */
     btnCloseModal.onclick = async function() {
-
         const response = await fetch(`http://localhost:8000/${username}/points`)
         const points = await response.json()
         const current_points_speed = points.points_speed
@@ -128,6 +127,7 @@ function startGame(){
                 points_speed: current_points_speed + speedPointMultiplier
             }),
         })
+        
 
         modal.style.display = "none";
         newSpeed()
