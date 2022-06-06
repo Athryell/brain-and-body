@@ -27,8 +27,8 @@ urlpatterns = [
     path('<str:username>/points', user_views.user_points, name='user_points'),
     path('global_stats_api', user_views.global_stats_api, name='global_stats_api'),
     path('', include('brain_and_body.urls')),
-    path('body/', include ('body.urls')),
-    path('brain/', include ('brain.urls'))
+    path('body/', include('body.urls')),
+    path('brain/', include('brain.urls'))
 ]
 
 if settings.DEBUG:
