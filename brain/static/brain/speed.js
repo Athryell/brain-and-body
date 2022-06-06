@@ -1,3 +1,5 @@
+var hostname
+
 const username = JSON.parse(document.getElementById('user_username').textContent)
 const canvas = document.getElementById('canvas')
 const canvasContainer = document.getElementById('canvas-container')
