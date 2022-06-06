@@ -20,4 +20,6 @@ if (window.location.hostname == 'brainandbody.herokuapp.com') {
     hostname = 'localhost:8000'
 } else if (window.location.hostname == '127.0.0.1') {
     hostname = '127.0.0.1:8000'
+} else {
+    console.log('error with hostname')
 }
