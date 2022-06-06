@@ -14,7 +14,7 @@
                     <div class="flip-card-front">
                     </div>
                     <div class="flip-card-back">
-                        <img src="{{ card.image.url }}" alt="{{ card.image.url }}">
+                        <img src="{% static 'images/' %}{{card.image_name}}" alt="{{ card.image.url }}">
                     </div>
                   </div>
             </div>
