@@ -7,7 +7,7 @@ let points_as
 let points_oc
 
 async function fetchPoints(){
-    const response = await fetch('http://localhost:8000/global_stats_api')
+    const response = await fetch(`http://${hostname}/global_stats_api`)
     const data = await response.json()
 
     data.forEach(country => {

@@ -13,8 +13,7 @@ The site is divided into 4 main apps, connected to each other, which use databas
 4. Run python manage.py makemigrations to make migrations for the app.
 5. Run python manage.py migrate to apply migrations to your database.
 6. Run python manage.py loaddata exercises.json to pre-populate the database with some exercises.
-7. Run python manage.py runserver to start the server.
-8. Open the page in localhost:8000 <- “localhost” is IMPORTANT.
+7. Run python manage.py runserver to start the server (Make sure it runs on '127.0.0.1' or 'localhost')
 ——
 
 

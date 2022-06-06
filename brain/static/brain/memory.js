@@ -76,16 +76,6 @@ function endGame(){
 
 /* Modal */
 btnCloseModal.onclick = async function() {
-    let hostname
-        
-    if (window.location.hostname == 'brainandbody.herokuapp.com') {
-        hostname = 'brainandbody.herokuapp.com'
-    } else if(window.location.hostname == 'localhost') {
-        hostname = 'localhost:8000'
-    } else if (window.location.hostname == '127.0.0.1') {
-        hostname = '127.0.0.1:8000'
-    }
-
     const response = await fetch(`http://${hostname}/${username}/points`)
     const points = await response.json()
     const current_points_memory = points.points_memory
