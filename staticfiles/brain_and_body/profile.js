@@ -6,14 +6,14 @@ let user_points
 
 spanEl.forEach(e => {
     e.addEventListener('click', async () => {
-        await fetch(`http://${hostname}/body/remove_exercise/${e.dataset.id}`)
+        await fetch(`${hostname}/body/remove_exercise/${e.dataset.id}`)
         e.parentElement.remove()
     })
 })
 
 // POINTS GRAPH
 async function fetchPoints(){
-    const response = await fetch(`http://${hostname}/${username}/points`)
+    const response = await fetch(`${hostname}/${username}/points`)
     const data = await response.json()
     user_points = [
         {name: 'W', value: data.points_workout === 0 ? 1 : data.points_workout},

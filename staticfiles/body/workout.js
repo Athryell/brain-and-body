@@ -167,12 +167,12 @@ function endGame(){
 
 /* Modal */
 btnCloseModal.onclick = async function() {
-
-    const response = await fetch(`http://${hostname}/${username}/points`)
+    const url = `${hostname}/${username}/points`
+    const response = await fetch(url)
     const points = await response.json()
     const current_points_workout = points.points_workout
 
-    fetch(`http://${hostname}/${username}/points`, {
+    fetch(url, {
         method: 'PUT',
         body: JSON.stringify({
             points_workout: current_points_workout + workoutPointMultiplier

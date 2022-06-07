@@ -209,11 +209,12 @@ function endGame(){
 
 /* Modal */
 btnCloseModal.onclick = async function() {
-    const response = await fetch(`http://${hostname}/${username}/points`)
+    const url = `${hostname}/${username}/points`
+    const response = await fetch(url)
     const points = await response.json()
     const current_points_tabata = points.points_tabata
 
-    fetch(`http://${hostname}/${username}/points`, {
+    fetch(url, {
         method: 'PUT',
         body: JSON.stringify({
             points_tabata: current_points_tabata + tabataPointMultiplier
