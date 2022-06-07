@@ -18,6 +18,8 @@ let circlePosX = Math.floor(Math.random() * canvas.width)
 let circlePosY = Math.floor(Math.random() * canvas.height)
 let isGameOver = false
 
+// import hostname from "../../../brain_and_body/static/brain_and_body/base.js"
+
 canvas.width = canvasContainer.clientWidth
 canvas.height = canvasContainer.clientHeight
 
@@ -117,7 +119,6 @@ function startGame(){
 
     /* Modal */
     btnCloseModal.onclick = async function() {
-
         const response = await fetch(`http://${hostname}/${username}/points`)
         const points = await response.json()
         const current_points_speed = points.points_speed
@@ -128,6 +129,7 @@ function startGame(){
                 points_speed: current_points_speed + speedPointMultiplier
             }),
         })
+        
 
         modal.style.display = "none";
         newSpeed()
