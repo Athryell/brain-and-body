@@ -2,7 +2,7 @@ const openMenuBtn = document.getElementById('open-menu')
 const closeMenuBtn = document.getElementById('close-menu')
 const menu = document.getElementById('responsive-menu')
 
-var hostname = checkHostname()
+export var hostname = checkHostname()
 
 function checkHostname(){
     if (window.location.hostname == 'brainandbody.herokuapp.com') {
