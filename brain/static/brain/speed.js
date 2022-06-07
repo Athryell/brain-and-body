@@ -18,7 +18,7 @@ let circlePosX = Math.floor(Math.random() * canvas.width)
 let circlePosY = Math.floor(Math.random() * canvas.height)
 let isGameOver = false
 
-import hostname from "../../../brain_and_body/static/brain_and_body/base.js"
+// import hostname from "../../../brain_and_body/static/brain_and_body/base.js"
 
 canvas.width = canvasContainer.clientWidth
 canvas.height = canvasContainer.clientHeight
